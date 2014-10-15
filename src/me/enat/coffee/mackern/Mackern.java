@@ -120,8 +120,7 @@ public class Mackern {
         Class<?> class_application = getApplicationClass();
 
         Method method_getApplication = class_application.getMethod("getApplication");
-        Object instance_application = method_getApplication.invoke(class_application);
-        return instance_application;
+        return method_getApplication.invoke(class_application);
     }
 
     private static Class<?> getApplicationClass() throws ClassNotFoundException {
