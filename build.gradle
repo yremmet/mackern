@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/'
+        }
+    }
+}
+
+sourceCompatibility = 1.7
+version = '0.0.1'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Mackern',
+                'Implementation-Version': version
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
